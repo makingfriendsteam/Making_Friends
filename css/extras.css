@@ -41,3 +41,9 @@ body, html {
     min-height: 400px;
   }
 }
+
+.titleStyling {text-align: center;}
+
+.formItem {width: 80%;}
+.buttonStyling {  }
+.signin-and-signup-form {  }
