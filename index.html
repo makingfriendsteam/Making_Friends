@@ -30,7 +30,7 @@
       <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">User Profile</a>
       <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Swiping Screen</a>
       <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">List of Matches/Convos</a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
   </div>
 
@@ -97,6 +97,14 @@
 
 
   <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -118,6 +126,5 @@ function toggleFunction() {
   }
 }
 </script>
-
 </body>
 </html>
