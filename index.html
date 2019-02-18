@@ -10,46 +10,46 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html" class="w3-bar-item w3-button">Sign up/Sign in</a>
-    <a href="page2.html" class="w3-bar-item w3-button w3-hide-small">User Profile</a>
-    <a href="page3.html" class="w3-bar-item w3-button w3-hide-small">Swiping Screen</a>
-    <a href="page4.html" class="w3-bar-item w3-button w3-hide-small">List of Matches/Convos</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="index.html" class="w3-bar-item w3-button">Sign up/Sign in</a>
+      <a href="page2.html" class="w3-bar-item w3-button w3-hide-small">User Profile</a>
+      <a href="page3.html" class="w3-bar-item w3-button w3-hide-small">Swiping Screen</a>
+      <a href="page4.html" class="w3-bar-item w3-button w3-hide-small">List of Matches/Convos</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">User Profile</a>
+      <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Swiping Screen</a>
+      <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">List of Matches/Convos</a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+    </div>
   </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">User Profile</a>
-    <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Swiping Screen</a>
-    <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">List of Matches/Convos</a>
-    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">MAKING</span> FRIENDS</span>
+    </div>
   </div>
-</div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">MAKING</span> FRIENDS</span>
-  </div>
-</div>
-
-<div>
+  <div>
     <div>
       <div>
         <h1>Log In</h1>
       </div>
     </div>
     <div className="signin-and-signup-form">
-      <div className="logInForm">
-        <form onSubmit={this.handleLogin}>
+      <div>
+        <form>
           <input className="formItem" type="text" name="logInEmail" placeholder="Email"/>
           <input className="formItem" type="password" name="logInPassword" placeholder="Password"/>
           <button className="buttonStyling"/>
@@ -58,13 +58,13 @@
     </div>
 
     <div>
-      <div className="titleStyling">
+      <div>
         <h1>Sign Up</h1>
       </div>
     </div>
     <div className="signin-and-signup-form">
-      <div className="signInForm">
-        <form onSubmit={this.handleSignUp}>
+      <div>
+        <form>
           <input className="formItem" type="text" name="signUpEmail" placeholder="Email"/>
           <input className="formItem" type="password" name="signUpPassword" placeholder="Password"/>
           <input className="formItem" type="text" name="firstName" placeholder="First Name"/>
@@ -76,46 +76,46 @@
     </div>
   </div>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Partners
+  <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">14+</span><br>
+      Partners
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">55+</span><br>
+      Projects Done
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">89+</span><br>
+      Happy Clients
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">150+</span><br>
+      Meetings
+    </div>
   </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Projects Done
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Happy Clients
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
-  </div>
-</div>
 
 
-<script>
+  <script>
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
+  var navbar = document.getElementById("myNavbar");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+  } else {
+    navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+  }
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 </script>
 
