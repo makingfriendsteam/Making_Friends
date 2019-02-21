@@ -10,63 +10,63 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html" class="w3-bar-item w3-button">Sign in/Sign up</a>
-    <a href="page2.html" class="w3-bar-item w3-button w3-hide-small">User Profile</a>
-    <a href="page3.html" class="w3-bar-item w3-button w3-hide-small">Swiping</a>
-    <a href="page4.html" class="w3-bar-item w3-button w3-hide-small">List of Matches</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="index.html" class="w3-bar-item w3-button">Sign in/Sign up</a>
+      <a href="page2.html" class="w3-bar-item w3-button w3-hide-small">User Profile</a>
+      <a href="page3.html" class="w3-bar-item w3-button w3-hide-small">Swiping</a>
+      <a href="page4.html" class="w3-bar-item w3-button w3-hide-small">List of Matches</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">User Profile</a>
+      <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Swiping</a>
+      <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">List of Matches</a>
+      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    </div>
   </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">User Profile</a>
-    <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Swiping</a>
-    <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">List of Matches</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-4 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MAKING FRIENDS</span>
+    </div>
   </div>
-</div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MAKING FRIENDS</span>
-  </div>
-</div>
-
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <div class="w3-row">
-    <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
-          </div>
+  <!-- Container (Login/Signup Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <div class="w3-row">
+      <form action="./page2.html" target="_blank"> 
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
         </div>
-        <button class="w3-button w3-black w3-middle w3-section" type="submit">LOG IN</button>
-      </form>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
-          </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-        <button class="w3-button w3-black w3-middle w3-section" type="submit"> SIGN UP</button>
-      </form>
+      </div>
+      <button class="w3-button w3-black w3-middle w3-section" type="submit">LOG IN</button>
+    </form>
+    <form action="./page2.html" target="_blank">
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
+        </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
+        </div>
+      </div>
+      <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+      <button class="w3-button w3-black w3-middle w3-section" type="submit"> SIGN UP</button>
+    </form>
   </div>
 </div>
 
@@ -85,7 +85,7 @@
   </div>
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">150,000+</span><br>
-    Happy People
+    Hours spent on app
   </div>
 </div>
 
@@ -101,24 +101,25 @@ function onClick(element) {
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
+  var navbar = document.getElementById("myNavbar");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+  } else {
+    navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+  }
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 </script>
+
 
 </body>
 </html>
