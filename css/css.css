@@ -1,0 +1,54 @@
+/* Discovery Page
+  by: Jimmy Yook
+*/
+
+div.discover-container{
+  min-height: 600px;
+}
+
+div.yesno-buttons{
+  display:block;
+}
+
+
+img.card-profile-pic{
+  width:100%;
+  box-shadow: 3px 3px;
+}
+
+ul.card-list{
+  padding:20px;
+  border: 1px solid black;
+  box-shadow: 5px 5px;
+}
+
+
+li.card{
+  width:30%;
+}
+
+div.discover-profile-container{
+  padding-left:5%;
+}
+
+div.discover-profile-container p{
+  margin: 0;
+  padding:0;
+}
+
+p.discover-profile-nameage{
+  margin:0;
+  font-size:2em;
+}
+
+p.discover-profile-location{
+  font-size:1.5em;
+}
+
+hr.discover-profile-divider{
+  border-top: 2px solid #E6E6E6;
+}
+
+p.discover-profile-introduction{
+  font-size:1em;
+}

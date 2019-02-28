@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
 <html>
-<title>Swiping</title>
+<title>User Profile</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
@@ -16,9 +17,9 @@
         <i class="fa fa-bars"></i>
       </a>
       <a href="index.html" class="w3-bar-item w3-button">Sign in/Sign up</a>
-      <a href="page2.html" class="w3-bar-item w3-button w3-hide-small">User Profile</a>
-      <a href="page3.html" class="w3-bar-item w3-button w3-hide-small">Swiping</a>
-      <a href="page4.html" class="w3-bar-item w3-button w3-hide-small">List of Matches</a>
+      <a href="profile.html" class="w3-bar-item w3-button w3-hide-small">My Profile</a>
+      <a href="discover.html" class="w3-bar-item w3-button w3-hide-small">Discover</a>
+      <a href="matches.html" class="w3-bar-item w3-button w3-hide-small">My Matches</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
         <i class="fa fa-search"></i>
       </a>
@@ -26,9 +27,9 @@
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">User Profile</a>
-      <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Swiping</a>
-      <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">List of Matches</a>
+      <a href="profile.html" class="w3-bar-item w3-button" onclick="toggleFunction()">My Profile</a>
+      <a href="discover.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Discover</a>
+      <a href="matches.html" class="w3-bar-item w3-button" onclick="toggleFunction()">My Matches</a>
       <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
   </div>
@@ -41,24 +42,47 @@
   </div>
 
   <!-- Container (About Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="about">
-    <h1 class="w3-center">Swiping</h1>
-    <p class="w3-center"><em>Find people to swipe on here</em></p>
-    <p>
-      Swipe on available people here!
-    </p>
-    <div class="w3-row">
-      <div class="w3-col m6 w3-center w3-padding-large">
-        <p><b><i class="fa fa-user w3-margin-right"></i>Steve</b></p><br>
-        <img src="images/p6.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="200" height="200">
-      </div>
-
-      <!-- Hide this text on small devices -->
-      <div class="w3-col m6 w3-hide-small w3-padding-large">
-        <p>Text</p>
-      </div>
-    </div>
+  <div class="w3-content w3-container w3-padding-32" id="about">
+    <h1 class="w3-center">Your Profile</h1>
+    <p class="w3-center"><em>Edit your profile details here</em></p>
+    <div><input type="file" id="myFile"></div>
+    <div class="w3-left"><em>Upload a profile picture</em></div>
+</form>
   </div>
+  <!-- Container (Login/Signup Section) -->
+  <div class="w3-content w3-container w3-padding-32" id="about">
+    <form action="./page3.html" target="_blank">
+    <div class="w3-row">
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="number" min="13" max="99" placeholder="enter age here" required name="Age">
+        </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text" placeholder="enter city here" required name="City">
+        </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text" placeholder="enter gender here" required name="Gender">
+        </div>
+      </div>
+       <textarea name="message" rows="5" cols="80" type="text" placeholder="talk about your likes, interests, achievements, etc here!" required name="Gender"></textarea>
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Username" name="Username">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Password" name="Password">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Email" name="Email">
+        <button class="w3-button w3-black w3-middle w3-section" type="submit"> SAVE CHANGES</button>
+    </div>
+  </form>
+  </div>
+
+
+
 
   <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
     <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -94,6 +118,5 @@ function toggleFunction() {
   }
 }
 </script>
-
 </body>
 </html>
