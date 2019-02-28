@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-
 <html>
-<title>Sign in/Sign up</title>
+<title>Discover</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/extras.css">
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="tinderesque-master/tinderesque.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
@@ -33,7 +34,6 @@
       <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
   </div>
-
   <!-- First Parallax Image with Logo Text -->
   <div class="bgimg-4 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
@@ -41,55 +41,69 @@
     </div>
   </div>
 
-  <!-- Container (Login/Signup Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="about">
-    <div class="w3-row">
-      <form action="./page2.html" target="_blank">
-      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-        <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
-        </div>
-        <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
-        </div>
-      </div>
-      <button class="w3-button w3-black w3-middle w3-section" type="submit">LOG IN</button>
-    </form>
-    <form action="./page2.html" target="_blank">
-      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-        <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
-        </div>
-        <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
-        </div>
-      </div>
-      <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-      <button class="w3-button w3-black w3-middle w3-section" type="submit"> SIGN UP</button>
-    </form>
-  </div>
-</div>
+  <!-- Container (Discover Section) -->
+  <div class="discover-container w3-content w3-container w3-padding-64" id="discover">
+    <h1 class="w3-center">Discover</h1>
+    <p class="w3-center"><em>Find your new bff!</em></p>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14,000+</span><br>
-    Users
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55,000+</span><br>
-    Conversations
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89,000+</span><br>
-    Matches
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150,000+</span><br>
-    Hours spent on app
-  </div>
-</div>
+    <div class="cardcontainer list">
+  <ul class="card-list">
+    <!-- <li class="card current" id="profile1">
+      <img class="card-profile-pic" src="profiles/Kyle/drake.jpg">
+      <div class="discover-profile-container">
+        <p class="discover-profile-nameage">
+          <span class="discover-profile-name">
+            Kyle
+          </span>
+          ,&nbsp
+          <span class="discover-profile-age">
+            22
+          </span>
+        </p>
+        <p class="discover-profile-location">Chicago, IL</p>
+        <hr class ="discover-profile-divider">
+        <p class="discover-profile-introduction">Hey what's uppppppppp!!!</p>
+      </div>
+    </li>
+    <li class="card"><img class="card-profile-pic" src="profiles/George/George-Clooney.jpg"></li>
+    <li class="card">#3</li>
+    <li class="card">#4</li>
+    <li class="card">#5</li>
+    <li class="card">#6</li> -->
+  </ul>
 
-<script>
+    <button class="but-nope">X</button>
+    <button class="but-yay">✔</button>
+
+</div>
+    <!-- <p>
+      Swipe on available people here!
+    </p> -->
+    <!-- <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b><i class="fa fa-user w3-margin-right"></i>Steve</b></p><br>
+        <img src="images/p6.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="200" height="200">
+      </div> -->
+
+      <!-- Hide this text on small devices -->
+      <!-- <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>Text</p>
+      </div>
+    </div> -->
+  </div>
+
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </footer>
+
+
+  <script src="tinderesque-master/tinderesque.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="js/discover_data.js"></script>
+  <script>
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -118,8 +132,8 @@ function toggleFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
-</script>
 
+</script>
 
 </body>
 </html>
