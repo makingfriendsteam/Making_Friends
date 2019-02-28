@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
 
-
+    // Create profile instances
     prof1=new Profile("Kyle", "Smith", "22", "Chicago, IL", "Hey what's uppppppppp!!!","profiles/Kyle/drake.jpg", false)
     prof2=new Profile("Steve", "Smith", "20", "Evanston, IL", "Just hanging around.","profiles/Steve/George-Clooney.jpg", true)
     prof3=new Profile("Daniel", "Smith", "19", "New York, NY", "Who wants to play a game o' ball with me?","profiles/Daniel/guy1.jpg",false)
@@ -10,11 +10,9 @@ $( document ).ready(function() {
 
     var profiles = [prof1,prof2,prof3,prof4,prof5];
 
-
+    // Write profile markup
     for (i = 0; i < profiles.length; i++) {
-
       currentClass = i==0?'current':''
-
       $('ul.card-list').append('<li class="card ' +
                               currentClass+ '"' +
                               ' id="profile' + i +'">' +
@@ -24,12 +22,11 @@ $( document ).ready(function() {
       $('#profile' + i + ' .discover-profile-age').html(profiles[i].age)
       $('#profile' + i + ' .discover-profile-location').html(profiles[i].location)
       $('#profile' + i + ' .discover-profile-introduction').html(profiles[i].introduction)
-
     }
 
     var currIdx = 0;
-    $('#JPO').popup();
 
+    //Alert when user is matched
     $("button.but-yay").click(function(){
       if(profiles[currIdx].likesYou){
           name=profiles[currIdx].firstName
@@ -38,6 +35,7 @@ $( document ).ready(function() {
       }
     });
 
+    //Track index in profile list, and disable discovery when no more profiles are left
     $("button.but-yay, button.but-nope").click(function(){
       if (currIdx == profiles.length-1){
         $("ul.card-list").html("No more profiles to show. Try again later!");
