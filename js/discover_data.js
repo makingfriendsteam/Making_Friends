@@ -33,7 +33,7 @@ $( document ).ready(function() {
     $("button.but-yay").click(function(){
       if(profiles[currIdx].likesYou){
           name=profiles[currIdx].firstName
-          alert("Congratulations. you and " + name + " liked each other!\n\n" + name + " has been added to your List of Matches.")
+          alert("Congratulations. you and " + name + " liked each other!\n\n" + name + " has been added to My Matches.")
           //$('#JPO').popup();
       }
     });
