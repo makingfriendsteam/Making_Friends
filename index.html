@@ -10,55 +10,32 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top">
-    <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-        <i class="fa fa-bars"></i>
-      </a>
-      <a href="index.html" class="w3-bar-item w3-button">Sign in/Sign up</a>
-      <a href="profile.html" class="w3-bar-item w3-button w3-hide-small">My Profile</a>
-      <a href="discover.html" class="w3-bar-item w3-button w3-hide-small">Discover</a>
-      <a href="matches.html" class="w3-bar-item w3-button w3-hide-small">My Matches</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-        <i class="fa fa-search"></i>
-      </a>
-    </div>
-
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="profile.html" class="w3-bar-item w3-button" onclick="toggleFunction()">My Profile</a>
-      <a href="discover.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Discover</a>
-      <a href="matches.html" class="w3-bar-item w3-button" onclick="toggleFunction()">My Matches</a>
-      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
-  </div>
 
   <!-- First Parallax Image with Logo Text -->
   <div class="bgimg-4 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MAKING FRIENDS</span>
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Best Friends</span>
     </div>
   </div>
 
   <!-- Container (Login/Signup Section) -->
   <div class="w3-content w3-container w3-padding-64" id="about">
     <div class="w3-row">
-      <form action="./page2.html" target="_blank">
+      <form action="./profile.html">
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
+          <input class="w3-input w3-border" onclick="userNameLocalStorage()" id="Username" type="text" placeholder="Username" required name="Username">
         </div>
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
+          <input class="w3-input w3-border" id="Password" type="text" placeholder="Password" required name="Password">
         </div>
       </div>
       <button class="w3-button w3-black w3-middle w3-section" type="submit">LOG IN</button>
     </form>
-    <form action="./page2.html" target="_blank">
+    <form action="./profile.html" class="extra-padding-signup">
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
+          <input class="w3-input w3-border" type="text" id="Username" placeholder="Username" required name="Username">
         </div>
         <div class="w3-half">
           <input class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
@@ -90,6 +67,11 @@
 </div>
 
 <script>
+
+function userNameLocalStorage {
+  var theUserName = document.getElementById("Username");
+  localStorage.setItem("Username", theUsername.value);
+}
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
