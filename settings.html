@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-<title>Your Matches</title>
+<title>Discover</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/extras.css">
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="tinderesque-master/tinderesque.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
@@ -34,33 +36,49 @@
       <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
   </div>
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-4 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Best Friends</span>
+    </div>
+  </div>
 
-    <!-- First Parallax Image with Logo Text -->
-    <div class="bgimg-4 w3-display-container w3-opacity-min" id="home">
-      <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Best Friends</span>
+<div class="w3-content w3-container w3-padding-32" id="about">
+  <div class="w3-content w3-container w3-padding-32" id="about">
+    <h1 class="w3-center">Settings</h1>
+    <div class="w3-center"><em>Edit Matching Settings</em></div>
+  </div>
+  <form id='settingsForm' method="get">
+  <div id='main-content' class='w3-row'>
+      <div class="w3-row w3-center">
+        <label>Location Matching</label>
+        <input class="w3-check" type="checkbox" name="LocationMatching">
       </div>
-    </div>
+      <div class="w3-row w3-center">
+        <label>Same Gender Matching</label>
+        <input class="w3-check" type="checkbox" name="GenderMatching">
+      </div>
+      <div class="w3-row w3-center w3-input">
+        <input class="w3-button w3-black w3-middle w3-section" type="submit" value="Submit">
+      </div>
+  </div>
+  </form>
+</div>
 
-    <!-- Container (About Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="about">
-      <h1 class="w3-center">List of Matches</h1>
-      <p class="w3-center"><em>Here are your matches</em></p>
-      <ul class="match-list">
 
-      </ul>
-    </div>
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </footer>
 
-    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    </footer>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
-    <script src="js/matches.js"></script>
-    <script>
+
+  <script src="tinderesque-master/tinderesque.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+  <script src="js/settings.js"></script>
+  <script>
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -89,6 +107,7 @@ function toggleFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
 </script>
 
 </body>

@@ -53,6 +53,10 @@ p.discover-profile-introduction{
   font-size:1em;
 }
 
+input.checkbox{
+  display:inline-block;
+}
+
 .popup_content {
   margin: 10px;
   padding: 0 10px;

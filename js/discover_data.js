@@ -1,17 +1,35 @@
+function Profile(first, last, gender, age, location, intro, prof_directory,likesYou) {
+    this.firstName = first;
+    this.lastName = last;
+    this.gender = gender;
+    this.age = age;
+    this.location = location;
+    this.introduction = intro;
+    this.prof_directory = prof_directory;
+    this.likesYou = likesYou;
+    this.matchedWithYou = false
+  };
 
 $( document ).ready(function() {
 
-    // Create profile instances
-    prof1=new Profile("Kyle", "Smith", "22", "Chicago, IL", "Hey what's uppppppppp!!!","profiles/Kyle/drake.jpg", false)
-    prof2=new Profile("Steve", "Smith", "20", "Evanston, IL", "Just hanging around.","profiles/Steve/George-Clooney.jpg", true)
-    prof3=new Profile("Daniel", "Smith", "19", "New York, NY", "Who wants to play a game o' ball with me?","profiles/Daniel/guy1.jpg",false)
-    prof4=new Profile("Kevin", "Smith", "32", "Los Angeles, CA", "Looking for a music-lover to join my band!","profiles/Kevin/jackblack.jpg",true)
-    prof5=new Profile("Tim", "Smith", "40", "Chicago, IL", "Introverts only.","profiles/Tim/ryan_gosling-2.jpg",false)
-
-    var profiles = [prof1,prof2,prof3,prof4,prof5];
+    var profiles = []
+    var profUser = JSON.parse(localStorage.getItem("User"));
+    var keys = ["Kyle Smith", "Steve Smith", "Daniel Smith", "Kevin Smith", "Tim Smith", "Liz Smith", "Hillary Clinton"];
+    for (var i = 0; i <  keys.length; i++) {
+        profiles.push(JSON.parse(localStorage.getItem(keys[i])));
+    }
 
     // Write profile markup
     for (i = 0; i < profiles.length; i++) {
+      console.log(!!(localStorage.getItem("LocationMatching")==="true"));
+      console.log(!!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase()));
+      console.log(!!(localStorage.getItem("LocationMatching")==="true") && !!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase()));
+      if (!!(localStorage.getItem("LocationMatching")==="true") && !!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase())) {
+        continue;
+      }
+      if (!!(localStorage.getItem("GenderMatching")==="true") && !!(profUser.gender.toLowerCase() !== profiles[i].gender.toLowerCase())) {
+        continue;
+      }
       currentClass = i==0?'current':''
       $('ul.card-list').append('<li class="card ' +
                               currentClass+ '"' +
@@ -31,6 +49,9 @@ $( document ).ready(function() {
       if(profiles[currIdx].likesYou){
           name=profiles[currIdx].firstName
           alert("Congratulations. you and " + name + " liked each other!\n\n" + name + " has been added to My Matches.")
+          profiles[currIdx].matchedWithYou = true;
+          localStorage.removeItem(keys[currIdx].firstName);
+          localStorage.setItem(keys[currIdx],JSON.stringify(profiles[currIdx]));
           //$('#JPO').popup();
       }
     });
@@ -44,7 +65,6 @@ $( document ).ready(function() {
       } else if (currIdx < profiles.length){
         currIdx++;
       }
-      console.log(currIdx);
     })
 
 
@@ -53,16 +73,6 @@ $( document ).ready(function() {
 
 
 });
-
-function Profile(first, last, age, location, intro, prof_directory,likesYou) {
-  this.firstName = first;
-  this.lastName = last;
-  this.age = age;
-  this.location = location;
-  this.introduction = intro;
-  this.prof_directory = prof_directory;
-  this.likesYou = likesYou;
-};
 
 
 var profilecard_html =
