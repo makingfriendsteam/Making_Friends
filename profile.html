@@ -57,26 +57,36 @@
     <div class="w3-row">
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="enter first name here" required name="FirstName">
+          <input class="w3-input w3-border" type="text" placeholder="First name" required name="FirstName">
         </div>
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="enter last name here" required name="LastName">
-        </div>
-      </div>
-      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-        <div class="w3-half">
-          <input class="w3-input w3-border" type="number" min="13" max="99" placeholder="enter age here" required name="Age">
-        </div>
-        <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="enter city here" required name="City">
+          <input class="w3-input w3-border" type="text" placeholder="Last name" required name="LastName">
         </div>
       </div>
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="enter gender here" required name="Gender">
+          <input class="w3-input w3-border" type="number" min="13" max="99" placeholder="Age" required name="Age">
+        </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text" placeholder="City" required name="City">
+        </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <!-- <input class="w3-input w3-border" type="text" placeholder="Gender" required name="Gender"> -->
+        <select id="gender-dropdown" class="w3-input w3-border" name="gender">
+          <option class="select-placeholder" value="" disabled selected>Gender</option>
+          <option class="select-option" value="male">Male</option>
+          <option class="select-option" value="female">Female</option>
+          <option class="select-option" value="other">Other</option>
+        </select>
         </div>
       </div>
        <textarea rows="5" cols="80" type="text" placeholder="Talk about your likes, interests, achievements, etc here!" required name="Introduction"></textarea>
+
+
+        <h1 class="w3-center"> Change Account Information </h1>
+        <p class="w3-center"><em>Change your username, password, and email (not required)</em></p>
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Username" name="Username">
@@ -95,7 +105,7 @@
 
 
   <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <!-- <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a> -->
   </footer>
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"

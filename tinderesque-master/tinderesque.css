@@ -67,10 +67,12 @@
 .tinderesque .cardcontainer.yes .card {
   -webkit-animation: yay 0.7s ease-out;
   animation: yay 0.7s ease-out;
+  /* background-color:green; */
 }
 .tinderesque .cardcontainer.nope .card {
   -webkit-animation: nope 0.7s ease-out;
   animation: nope 0.7s ease-out;
+  /* background-color:red; */
 }
 
 
@@ -86,6 +88,7 @@
   to {
     transform: rotate(40deg) translateY(-80px);
     opacity: 0;
+    background-color: #85e085;
   }
 }
 
@@ -97,6 +100,7 @@
   to {
     -webkit-transform: rotate(40deg) translateY(-80px);
     opacity: 0;
+    background-color: #85e085;
   }
 }
 
@@ -108,6 +112,7 @@
   to {
     transform: rotate(-40deg) translateY(-80px);
     opacity: 0;
+    background-color: #ff8080;
   }
 }
 
@@ -119,5 +124,6 @@
   to {
     -webkit-transform: rotate(-40deg) translateY(-80px);
     opacity: 0;
+    background-color: #ff8080;
   }
 }
