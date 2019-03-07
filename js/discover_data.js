@@ -21,9 +21,9 @@ $( document ).ready(function() {
 
     // Write profile markup
     for (i = 0; i < profiles.length; i++) {
-      console.log(!!(localStorage.getItem("LocationMatching")==="true"));
-      console.log(!!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase()));
-      console.log(!!(localStorage.getItem("LocationMatching")==="true") && !!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase()));
+      //console.log(!!(localStorage.getItem("LocationMatching")==="true"));
+      //console.log(!!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase()));
+      //console.log(!!(localStorage.getItem("LocationMatching")==="true") && !!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase()));
       if (!!(localStorage.getItem("LocationMatching")==="true") && !!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase())) {
         continue;
       }
