@@ -51,3 +51,17 @@ body, html {
 .extra-padding-signup {
   padding-top: 80px;
 }
+
+#gender-dropdown{
+  margin-left:0;
+  padding-left:4px;
+
+
+}
+
+.select-option{}
+
+.select-placeholder{
+
+
+}
