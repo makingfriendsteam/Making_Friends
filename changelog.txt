@@ -1,0 +1,5 @@
+changelog
+
+-Removed links from login/signup to other pages
+-Retitled 'login/signup' as 'logout' when going to the page from other pages
+-Implemented local-storage user profiles; you can make as many as you want

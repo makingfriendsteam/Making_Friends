@@ -57,18 +57,18 @@
     <div class="w3-row">
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="First name" required name="FirstName">
+          <input id="FirstName" class="w3-input w3-border" type="text" placeholder="First name" required name="FirstName">
         </div>
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="Last name" required name="LastName">
+          <input id="LastName" class="w3-input w3-border" type="text" placeholder="Last name" required name="LastName">
         </div>
       </div>
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
-          <input class="w3-input w3-border" type="number" min="13" max="99" placeholder="Age" required name="Age">
+          <input id="Age" class="w3-input w3-border" type="number" min="13" max="99" placeholder="Age" required name="Age">
         </div>
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="City" required name="City">
+          <input id="City" class="w3-input w3-border" type="text" placeholder="City" required name="City">
         </div>
       </div>
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
@@ -82,21 +82,21 @@
           </select>
         </div>
       </div>
-       <textarea rows="5" cols="80" type="text" placeholder="Talk about your likes, interests, achievements, etc here!" required name="Introduction"></textarea>
+       <textarea id="Introduction" rows="5" cols="80" type="text" placeholder="Talk about your likes, interests, achievements, etc here!" required name="Introduction"></textarea>
 
 
         <h1 class="w3-center"> Change Account Information </h1>
         <p class="w3-center"><em>Change your username, password, and email (not required)</em></p>
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Username" name="Username">
+            <input id='username' class="w3-input w3-border" type="text" placeholder="Username" name="Username">
           </div>
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Password" name="Password">
+            <input id='password' class="w3-input w3-border" type="text" placeholder="Password" name="Password">
           </div>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Email" name="Email">
-        <button class="w3-button w3-black w3-middle w3-section" id="submit" type="submit"> SAVE CHANGES</button>
+        <input id='email' class="w3-input w3-border" type="text" placeholder="Email" name="Email">
+        <button class="w3-button w3-black w3-middle w3-section" type="submit"> SAVE CHANGES</button>
     </div>
     </form>
   </div>

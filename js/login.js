@@ -1,5 +1,7 @@
 $( document ).ready(function() {
-  localStorage.clear();
+  localStorage.removeItem('CurrentAccount')
+  localStorage.removeItem('CurrentAccountProfile')
+  //localStorage.clear();
   prof1=new Profile("Kyle", "Smith", "Male", "22", "Chicago", "Hey what's uppppppppp!!!","profiles/Kyle/drake.jpg", false)
   prof2=new Profile("Steve", "Smith", "Male", "20", "Evanston", "Just hanging around.","profiles/Steve/George-Clooney.jpg", true)
   prof3=new Profile("Daniel", "Smith", "Male", "19", "New York", "Who wants to play a game o' ball with me?","profiles/Daniel/guy1.jpg",false)
@@ -14,8 +16,46 @@ $( document ).ready(function() {
       localStorage.setItem(keys[i],JSON.stringify(profiles[i]));
   }
 
+
 });
 
+function SignupAccountUpdate() {
+  var userName = document.getElementById('Username_Signup').value;
+  var password = document.getElementById('Password_Signup').value;
+  var email = document.getElementById('Email_Signup').value;
+  account = localStorage.getItem(userName);
+  if (account) {
+    alert("Account already exists. Log in with it, and try again.");
+    window.location.reload();
+    return false;
+  }
+  account = new Account(userName,password,email);
+  localStorage.setItem(userName,JSON.stringify(account));
+  localStorage.setItem('CurrentAccount',JSON.stringify(account));
+  document.getElementById('signup-form').action="./profile.html";
+  return false;
+}
+
+function LoginAccountUpdate(userName , password) {
+  var userName = document.getElementById('Username_Login').value;
+  var password = document.getElementById('Password_Login').value;
+  account = localStorage.getItem(userName); //First check if account exists before parse
+  if (account===null) {
+    alert("Account does not exist. Please sign up and try again.");
+    window.location.reload();
+    return false;
+  }
+  account = JSON.parse(account);
+  if (account.password !== password) {
+    alert("That is the wrong password. Please try again.");
+    window.location.reload();
+    return false;
+  }
+  localStorage.setItem(userName,JSON.stringify(account));
+  localStorage.setItem('CurrentAccount',JSON.stringify(account));
+  document.getElementById('login-form').action="./profile.html";
+  return false;
+}
 
 function Profile(first, last, gender, age, location, intro, prof_directory,likesYou) {
     this.firstName = first;
@@ -27,4 +67,10 @@ function Profile(first, last, gender, age, location, intro, prof_directory,likes
     this.prof_directory = prof_directory;
     this.likesYou = likesYou;
     this.matchedWithYou = false
+  };
+  function Account(userName, password,email,key="undefined") {
+    this.userName = userName;
+    this.password = password;
+    this.email=email;
+    this.key="undefined"
   };
