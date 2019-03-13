@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+  /*
   localStorage.clear();
   prof1=new Profile("Kyle", "Smith", "Male", "22", "Chicago", "Hey what's uppppppppp!!!","profiles/Kyle/drake.jpg", false)
   prof2=new Profile("Steve", "Smith", "Male", "20", "Evanston", "Just hanging around.","profiles/Steve/George-Clooney.jpg", true)
@@ -13,21 +14,37 @@ $( document ).ready(function() {
   for (var i = 0; i < profiles.length; i++) {
       localStorage.setItem(keys[i],JSON.stringify(profiles[i]));
   }
+  */
+  var account = JSON.parse(localStorage.getItem('CurrentAccount'));
+  document.getElementById('username').defaultValue=account.userName;
+  document.getElementById('password').defaultValue=account.password;
+  document.getElementById('email').defaultValue=account.email;
+  if (account.key !== "undefined") {
+    account = JSON.parse(localStorage.getItem(account.key));
+    document.getElementById('FirstName').defaultValue=account.firstName;
+    document.getElementById('LastName').defaultValue=account.lastName
+    document.getElementById('Age').defaultValue=account.age;
+    document.getElementById('City').defaultValue=account.location;
+    document.getElementById('Introduction').defaultValue=account.introduction
+  }
 
-  $('#profileForm').on('submit', function () {
-    var firstName = $('[name="FirstName"]')[0].value;
-    var lastName = $('[name="LastName"]')[0].value;
-    var age = $('[name="Age"]')[0].value;
-    var gender = $('[name="Gender"]')[0].value;
-    var city = $('[name="City"]')[0].value;
-    var introduction = $('[name="Introduction"]')[0].value;
-    profUser = new Profile(firstName,lastName,gender,age,city,introduction,'',true);
-    localStorage.removeItem("User");
-    localStorage.setItem("User",JSON.stringify(profUser));
-    location.href="./discover.html";
-    return false;
-  });
-
+});
+$('#profileForm').on('submit', function () {
+  var firstName = $('[name="FirstName"]')[0].value;
+  var lastName = $('[name="LastName"]')[0].value;
+  var age = $('[name="Age"]')[0].value;
+  var gender = $('[name="Gender"]')[0].value;
+  var city = $('[name="City"]')[0].value;
+  var introduction = $('[name="Introduction"]')[0].value;
+  var profUser = new Profile(firstName,lastName,gender,age,city,introduction,'',true);
+  var account = JSON.parse(localStorage.getItem('CurrentAccount'));
+  account.key = firstName + " " + lastName;
+  localStorage.setItem('CurrentAccount',JSON.stringify(account));
+  localStorage.setItem("CurrentAccountProfile",JSON.stringify(profUser));
+  localStorage.setItem(account.userName,JSON.stringify(account));
+  localStorage.setItem(account.key,JSON.stringify(profUser));
+  location.href="./discover.html";
+  return false;
 });
 
 function Profile(first, last, gender, age, location, intro, prof_directory,likesYou) {
@@ -40,4 +57,10 @@ function Profile(first, last, gender, age, location, intro, prof_directory,likes
     this.prof_directory = prof_directory;
     this.likesYou = likesYou;
     this.matchedWithYou = false
+  };
+  function Account(userName, password,email,key="undefined") {
+    this.userName = userName;
+    this.password = password;
+    this.email=email;
+    this.key="undefined"
   };

@@ -21,28 +21,28 @@
   <!-- Container (Login/Signup Section) -->
   <div class="w3-content w3-container w3-padding-64" id="about">
     <div class="w3-row">
-      <form action="./profile.html">
+      <form id="login-form">
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
-          <input class="w3-input w3-border" onclick="userNameLocalStorage()" id="Username_Login" type="text" placeholder="Username" required name="Username">
+          <input class="w3-input w3-border"id="Username_Login" type="text" placeholder="Username" required name="Username">
         </div>
         <div class="w3-half">
           <input class="w3-input w3-border" id="Password_Login" type="text" placeholder="Password" required name="Password">
         </div>
       </div>
-      <button class="w3-button w3-black w3-middle w3-section" type="submit">LOG IN</button>
+      <button class="w3-button w3-black w3-middle w3-section" onclick="LoginAccountUpdate()"  type="submit">LOG IN</button>
     </form>
-    <form action="./profile.html" class="extra-padding-signup">
+    <form id="signup-form" class="extra-padding-signup">
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
           <input class="w3-input w3-border" type="text" id="Username_Signup" placeholder="Username" required name="Username">
         </div>
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="Password_Signup" required name="Password">
+          <input class="w3-input w3-border" type="text" placeholder='Password' id="Password_Signup" required name="Password">
         </div>
       </div>
-      <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-      <button class="w3-button w3-black w3-middle w3-section" type="submit"> SIGN UP</button>
+      <input id='Email_Signup' class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+      <button class="w3-button w3-black w3-middle w3-section" onclick="SignupAccountUpdate()" type="submit"> SIGN UP</button>
     </form>
   </div>
 </div>
@@ -65,15 +65,10 @@
     Hours spent on app
   </div>
 </div>
-
-<script>
-
-function userNameLocalStorage() {
-  var theUserName = document.getElementById("Username");
-  localStorage.setItem("Username", theUsername.value);
-}
-</script>
-
-
+<script
+src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

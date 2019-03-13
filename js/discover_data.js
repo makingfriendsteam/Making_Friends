@@ -13,10 +13,17 @@ function Profile(first, last, gender, age, location, intro, prof_directory,likes
 $( document ).ready(function() {
 
     var profiles = []
-    var profUser = JSON.parse(localStorage.getItem("User"));
+    var profUser = JSON.parse(localStorage.getItem("CurrentAccountProfile"));
     var keys = ["Kyle Smith", "Steve Smith", "Daniel Smith", "Kevin Smith", "Tim Smith", "Liz Smith", "Hillary Clinton"];
     for (var i = 0; i <  keys.length; i++) {
-        profiles.push(JSON.parse(localStorage.getItem(keys[i])));
+      myProfile = JSON.parse(localStorage.getItem(keys[i]));
+      if (!!(localStorage.getItem("LocationMatching")==="true") && !!(profUser.location.toLowerCase() !== myProfile.location.toLowerCase())) {
+        continue;
+      }
+      if (!!(localStorage.getItem("GenderMatching")==="true") && !!(profUser.gender.toLowerCase() !== myProfile.gender.toLowerCase())) {
+        continue;
+      }
+      profiles.push(myProfile);
     }
 
     // Write profile markup
@@ -24,12 +31,6 @@ $( document ).ready(function() {
       //console.log(!!(localStorage.getItem("LocationMatching")==="true"));
       //console.log(!!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase()));
       //console.log(!!(localStorage.getItem("LocationMatching")==="true") && !!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase()));
-      if (!!(localStorage.getItem("LocationMatching")==="true") && !!(profUser.location.toLowerCase() !== profiles[i].location.toLowerCase())) {
-        continue;
-      }
-      if (!!(localStorage.getItem("GenderMatching")==="true") && !!(profUser.gender.toLowerCase() !== profiles[i].gender.toLowerCase())) {
-        continue;
-      }
       currentClass = i==0?'current':''
       $('ul.card-list').append('<li class="card ' +
                               currentClass+ '"' +
