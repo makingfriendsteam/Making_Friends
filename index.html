@@ -24,10 +24,10 @@
       <form id="login-form">
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
-          <input class="w3-input w3-border"id="Username_Login" type="text" placeholder="Username" required name="Username">
+          <input pattern=".{3,}" required title="3 characters minimum" class="w3-input w3-border"id="Username_Login" type="text" placeholder="Username" required name="Username">
         </div>
         <div class="w3-half">
-          <input class="w3-input w3-border" id="Password_Login" type="text" placeholder="Password" required name="Password">
+          <input pattern=".{3,}" required title="3 characters minimum" class="w3-input w3-border" id="Password_Login" type="password" placeholder="Password" required name="Password">
         </div>
       </div>
       <button class="w3-button w3-black w3-middle w3-section" onclick="LoginAccountUpdate()"  type="submit">LOG IN</button>
@@ -35,13 +35,13 @@
     <form id="signup-form" class="extra-padding-signup">
       <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" id="Username_Signup" placeholder="Username" required name="Username">
+          <input pattern=".{3,}" required title="3 characters minimum" class="w3-input w3-border" type="text" id="Username_Signup" placeholder="Username" required name="Username">
         </div>
         <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder='Password' id="Password_Signup" required name="Password">
+          <input pattern=".{3,}" required title="3 characters minimum" class="w3-input w3-border" type="password" placeholder='Password' id="Password_Signup" required name="Password">
         </div>
       </div>
-      <input id='Email_Signup' class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+      <input pattern=".{5,}" required title="5 characters minimum" class="w3-input w3-border" type="text" id='Email_Signup' placeholder="Email" required name="Email">
       <button class="w3-button w3-black w3-middle w3-section" onclick="SignupAccountUpdate()" type="submit"> SIGN UP</button>
     </form>
   </div>
