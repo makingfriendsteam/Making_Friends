@@ -64,3 +64,9 @@ input.checkbox{
   border: 2px solid #444;
   background: white;
 }
+
+ul.match-list{
+  width:20%;
+  margin:0;
+  display:inline-block;
+}

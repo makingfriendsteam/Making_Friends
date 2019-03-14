@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/extras.css">
+<link rel="stylesheet" href="css/chat.css">
+<link rel="stylesheet" href="css/css.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
@@ -49,7 +51,28 @@
       <ul class="match-list">
 
       </ul>
+
+      <!----chat--->
+          <div id="chat">
+            <div class="chat_header">CHAT</div>
+            <div id="chat_s"></div>
+            <script type="text/javascript">
+              var submitted = false;
+            </script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){add()}"></iframe>
+            <form id="ss-form" onsubmit="submitted=true" action="https://docs.google.com/forms/d/1-PRLoHTtgldV5cNTvmVyjf-rf1p1kLhzKGXn2i1XGhQ/formResponse" method="POST" target="hidden_iframe"><input name="entry.1732478127" title="" class="ss-q-short" id="entry_1732478127" dir="auto" aria-label="Message  " type="text" value="">
+              <input name="draftResponse" type="hidden" value='[,,"-2195881827543510175"]&#10;'>
+              <input name="pageHistory" type="hidden" value="0">
+              <input name="fvv" type="hidden" value="0">
+              <input name="fbzx" type="hidden" value="-2195881827543510175">
+              <input name="submit" class="jfk-button jfk-button-action " id="ss-submit" type="submit" value="Submit" onClick="return check()">
+            </form>
+        </div>
+
+        <!----end of chat--->
     </div>
+
+
 
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
       <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -60,6 +83,8 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
     <script src="js/matches.js"></script>
+    <script src="js/chat.js"></script>
+
     <script>
 // Modal Image Gallery
 function onClick(element) {

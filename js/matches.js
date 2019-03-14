@@ -42,4 +42,9 @@ $( document ).ready(function() {
       '</li>');
       $('#profile' + i + ' img').attr("src",profiles[i].prof_directory)
     }
+
+    $('li.match').click(function(){
+      console.log('clicked');
+      $('div#chat').css("display","inline-block");
+    });
 });
