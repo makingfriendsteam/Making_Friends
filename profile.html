@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/extras.css">
+<link rel="stylesheet" href="css/css.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
@@ -47,7 +48,8 @@
   <div class="w3-content w3-container w3-padding-32" id="about">
     <h1 class="w3-center">Your Profile</h1>
     <p class="w3-center"><em>Edit your profile details here</em></p>
-    <div><input type="file" id="myFile"></div>
+    <div><input type="file" id="myFile" onchange="readURL(this);"></div>
+    <img id="blah" src="https://sahs.ukzn.ac.za/wp-content/uploads/2018/02/profile-placeholder.png" alt="your image" />
     <div class="w3-left"><em>Upload a profile picture</em></div>
 </form>
   </div>
