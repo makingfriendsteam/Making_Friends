@@ -10,7 +10,11 @@ function Profile(first, last, gender, age, location, intro, prof_directory,likes
     this.matchedWithYou = false
   };
 
+
+
 $( document ).ready(function() {
+
+
 
     /*
     // Create profile instances
@@ -36,7 +40,7 @@ $( document ).ready(function() {
       $('ul.match-list').append('<li class="match" id="profile' + i +'">' +
         //'<div class="w3-row">'+
         //'<div class="w3-col m6 w3-left w3-padding-large">'+
-        '<p><b><i class="fa fa-user w3-margin-right"></i>'+ profiles[i].firstName + ' ' + profiles[i].lastName + '</b></p>'+
+        '<p><b><i class="fa fa-user w3-margin-right"></i>'+ '<span id="match-firstname">'+ profiles[i].firstName + '</span> ' + profiles[i].lastName + '</b></p>'+
         '<img src="images/p2.jpg" id="profile'+i+'img" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of '+profiles[i].firstName+'" width="100" height="100">'+
         '<p>'+profiles[i].introduction+'</p>'+ //'</div></div>'+
       '</li>');
@@ -46,5 +50,46 @@ $( document ).ready(function() {
     $('li.match').click(function(){
       console.log('clicked');
       $('div#chat').css("display","inline-block");
+      var firstname=$(this).find("#match-firstname").html()
+
+      for (var i = 0; i < 1; i++) {
+
+        document.getElementById("chat_s").innerHTML +=
+          '<div class="chat' +
+
+          '"><div class="chat_message">' +
+          'Hey how r u' +
+          '</div><div class="chat_name">' +
+          firstname +
+          "</div></div>";
+      }
     });
 });
+
+
+function add() {
+  document.getElementById("chat_s").innerHTML +=
+    '<div class="chat chat_other"><div class="chat_message">' +
+    document.querySelector("#chat input").value +
+    '</div><div class="chat_name">' +
+    "" + //todo: fix to show user's first name
+    "</div></div>";
+  document.querySelector("#chat input").value = "";
+  document.getElementById("chat_s").scrollTop = document.getElementById(
+    "chat_s"
+  ).scrollHeight;
+}
+
+function check() {
+  var x;
+  x = document.getElementById("entry_1732478127").value;
+  if (!x.replace(/\s/g, "").length) {
+    alert(
+      "Don't post empty spaces, it doesn't allow any comments to appear afterwards."
+    );
+    return false;
+  }
+}
+
+
+var chatHTML=""
