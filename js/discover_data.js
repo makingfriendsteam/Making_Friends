@@ -23,7 +23,10 @@ $( document ).ready(function() {
       if (!!(localStorage.getItem("GenderMatching")==="true") && !!(profUser.gender.toLowerCase() !== myProfile.gender.toLowerCase())) {
         continue;
       }
+      if (!myProfile.matchedWithYou){
       profiles.push(myProfile);
+      // console.log(profiles);
+      }
     }
 
     // Write profile markup
